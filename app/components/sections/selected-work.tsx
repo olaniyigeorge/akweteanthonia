@@ -31,9 +31,17 @@ export default function SelectedWork() {
       </div>
       <ul className="home-case-list">
         {workItems.map((item) => (
-          <li className="case-row" key={item.title}>
-            <div className="case-copy"><h3>{item.title}</h3><p>{item.text}</p></div>
-            <span className="case-read">{item.detail}</span>
+          <li className="case-row" key={item.title} tabIndex={0}>
+            <div className="case-face case-face-front">
+              <div className="case-copy"><h3>{item.title}</h3><p>{item.text}</p></div>
+              <span className="case-read">{item.detail}</span>
+              <span className="case-flip-hint" aria-hidden="true">Hover to read more ↗</span>
+            </div>
+            <div className="case-face case-face-back" aria-hidden="true">
+              <span className="case-back-label">How I make it happen</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail} — with clear communication, careful follow-through, and a customer-first approach.</p>
+            </div>
           </li>
         ))}
       </ul>

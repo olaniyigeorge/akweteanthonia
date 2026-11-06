@@ -277,3 +277,47 @@ main.site-theme:has(#theme-switch:checked) .hero-photo-note { color:var(--ink); 
 @media (prefers-reduced-motion:reduce) {
   .timeline-disclosure[open] > ul { animation:none; }
 }
+
+/* Keep capability copy readable when the theme switches to dark colors. */
+main.site-theme:has(#theme-switch:checked) .capabilities-section { background:var(--cream); }
+
+/* Flip the practice cards to reveal the supporting copy on hover or keyboard focus. */
+.home-case-list { perspective:1200px; }
+.case-row { position:relative; display:block; padding:0; border:0; border-radius:5px; background:transparent; outline-offset:5px; transform-style:preserve-3d; transition:transform .65s cubic-bezier(.2,.75,.25,1); }
+.case-row:hover,.case-row:focus-visible { padding:0; border:0; background:transparent; transform:rotateY(180deg); box-shadow:none; }
+.case-face { position:absolute; inset:0; display:flex; flex-direction:column; padding:25px 24px; border:1px solid var(--line); border-top:3px solid var(--teal); border-radius:5px; backface-visibility:hidden; -webkit-backface-visibility:hidden; }
+.case-face-front { background:var(--sand); }
+.case-face-back { justify-content:center; background:var(--deep); color:#fff; transform:rotateY(180deg); }
+.case-face-back h3 { max-width:290px; margin:22px 0 12px; font-size:22px; line-height:1.08; letter-spacing:-.045em; }
+.case-face-back p { margin:0; color:#d1dfdc; font-size:13px; line-height:1.65; }
+.case-back-label { color:#f8a187; font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+.case-flip-hint { margin-top:13px; color:var(--coral); font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; }
+@media (max-width:700px) {
+  .case-row,.case-row:hover,.case-row:focus-visible { min-height:260px; padding:0; }
+  .case-row:last-child { min-height:260px; }
+  .case-face { padding:22px 20px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .case-row { transition:none; }
+}
+
+/* Give the capability section a light surface and soft text in dark mode. */
+main.site-theme:has(#theme-switch:checked) .capabilities-section { background:#fff; color:#304247; }
+main.site-theme:has(#theme-switch:checked) .capabilities-section .section-heading-row h2,
+main.site-theme:has(#theme-switch:checked) .capabilities-section .home-capability-columns h3 { color:#304247; }
+main.site-theme:has(#theme-switch:checked) .capabilities-section .section-heading-row > p,
+main.site-theme:has(#theme-switch:checked) .capabilities-section .home-capability-columns p { color:#738084; }
+main.site-theme:has(#theme-switch:checked) .capabilities-section .capability-proof { color:#687b7f; }
+
+/* Tighten the hero's vertical spacing. */
+.hero { padding-top:34px; padding-bottom:42px; }
+.hero h1 { margin-top:30px; margin-bottom:22px; }
+.hero-tagline { margin-bottom:38px; }
+@media (max-width:900px) {
+  .hero { padding-top:30px; padding-bottom:36px; }
+}
+@media (max-width:700px) {
+  .hero { padding-top:26px; padding-bottom:34px; }
+  .hero h1 { margin-top:26px; margin-bottom:19px; }
+  .hero-tagline { margin-bottom:30px; }
+}

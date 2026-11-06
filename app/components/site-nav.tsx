@@ -4,7 +4,7 @@ export default function SiteNav() {
   return (
     <nav className="site-nav" aria-label="Main navigation">
       <a className="brand" href="#top">
-        <span className="brand-mark">AA</span><span>Anthonia Akouete</span>
+        <span>Anthonia Akouete</span>
       </a>
       <input className="nav-switch-input" id="nav-switch" type="checkbox" aria-label="Toggle navigation" />
       <div className="nav-links">

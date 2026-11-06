@@ -35,6 +35,11 @@ const roles: ExperienceRole[] = [
     title: "Freelance Translator",
     organization: "Traduction Spécialisée",
     location: "Abuja, Federal Capital Territory, Nigeria",
+    responsibilities: [
+      "Translated written content between French and English while preserving meaning and tone",
+      "Reviewed translations for clarity, accuracy, and consistent terminology",
+      "Managed assignments independently and delivered work to agreed deadlines",
+    ],
     skills: ["Language Teaching", "Teamwork"],
   },
   {
@@ -43,6 +48,11 @@ const roles: ExperienceRole[] = [
     title: "French Tutor",
     organization: "Yahaya Ahmed Model School · Full-time",
     location: "Gombe State, Nigeria",
+    responsibilities: [
+      "Planned and delivered French lessons suited to students’ learning needs",
+      "Explained grammar and vocabulary through clear examples and practice",
+      "Supported students as they built confidence in speaking and comprehension",
+    ],
     skills: ["Language Teaching", "Teamwork"],
   },
   {
@@ -51,6 +61,11 @@ const roles: ExperienceRole[] = [
     title: "Bilingual Administrative Assistant",
     organization: "Agence Régionale pour l'Agriculture et l'Alimentation de la CEDEAO · Internship",
     location: "Lomé, Maritime Region, Togo",
+    responsibilities: [
+      "Supported day-to-day administrative work in a bilingual office environment",
+      "Assisted with document preparation, organization, and communication",
+      "Helped coordinate information across colleagues working in French and English",
+    ],
     skills: ["Organization", "Teamwork"],
   },
 ];
